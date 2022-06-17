@@ -32,7 +32,7 @@ app.get("/", ( req, res ) => {
 
 	let stream = fs.createReadStream( opts.baseDir + '/index.html' );
 	stream.on('error', error => {
-		res.write('<style>body{font-family: sans-serif;}</style><h2>reveal.js multiplex server.</h2><a href="/token">Generate token</a>');
+		res.write('<style>body{font-family: sans-serif;}</style><h2>reveal.js multiplex server is running normally.</h2><a href="/token">Generate token</a>');
 		res.end();
 	});
 	stream.on('open', () => {
