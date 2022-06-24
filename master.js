@@ -15,6 +15,8 @@
 			state: Reveal.getState(),
 			secret: multiplex.secret,
 			socketId: multiplex.id,
+			path: multiplex.path,
+			host: multiplex.host,
 			content: (evt || {}).content
 		};
 
