@@ -26,7 +26,7 @@ io.on('connection', socket => {
 });
 
 app.use(express.static(opts.baseDir));
-app.use(express.static('public'))
+app.use("/", express.static(__dirname + "/public"));
 
 app.get("/", (req, res) => {
 	res.writeHead(200, { 'Content-Type': 'text/html' });
