@@ -24,7 +24,10 @@
 		}
 	});
 
-	status.innerText = "Connected to sync server";
+	setTimeout(() => {
+		console.log(status);
+		status.innerText = "Connected to sync server";
+	}, 50);
 	setTimeout(() => {
 		status.classList.remove("show");
 	}, 5000);

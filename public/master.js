@@ -37,7 +37,10 @@
 	Reveal.on( 'resumed', post );
 	document.addEventListener( 'send', post ); // broadcast custom events sent by other plugins
 
-	status.innerText = "Connected to sync server";
+	setTimeout(() => {
+		console.log(status);
+		status.innerText = "Connected to sync server";
+	}, 50);
 	setTimeout(() => {
 		status.classList.remove("show");
 	}, 5000);
