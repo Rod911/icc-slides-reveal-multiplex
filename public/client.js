@@ -23,4 +23,11 @@
 			document.dispatchEvent( event );
 		}
 	});
+	
+	Reveal.on("ready", (event) => {
+		status.innerText = "Connected to sync server";
+		setTimeout(() => {
+			status.classList.remove("show");
+		}, 5000);
+	});
 }());
