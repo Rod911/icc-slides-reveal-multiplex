@@ -9,7 +9,7 @@
 
 	function post( evt ) {
 		console.log(evt);
-		
+
 
 		var messageData = {
 			state: Reveal.getState(),
@@ -36,5 +36,10 @@
 	Reveal.on( 'paused', post );
 	Reveal.on( 'resumed', post );
 	document.addEventListener( 'send', post ); // broadcast custom events sent by other plugins
+
+	status.innerText = "Connected to sync server";
+	setTimeout(() => {
+		status.classList.remove("show");
+	}, 5000);
 
 }());
